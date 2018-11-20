@@ -4,24 +4,15 @@
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ATT LOGIN QR CODE SCANNER</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <style>
     video {
       width: 100%    !important;
       height: auto   !important;
     }
-    .btn{
-      margin-top:5px;
-      margin-bottom:10px;
-      padding:5px;
-      background-color: #20a8d8;
-      color: #f3f4f5;
-      border-radius:3px;
-      width: 150px;
-      cursor: pointer;
-    }
     .camera{
       padding:5px;
-      background-color: #20a8d8;
+      background-color: #000000;
       border-radius:3px;
       width: 80%;
     }
@@ -65,34 +56,25 @@
 <script type="text/javascript" src="llqrcode.js"></script>
 <script type="text/javascript" src="webqr.js"></script>
 </head>
-<body>
+<body style='background-color:black;'>
   <center>
     <div id="main">
       <div id="mainbody">
-        <div class="progress">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+	  <h4>SCAN QR CODE TO USE WIFI</h4>
         <div class="camera" id="outdiv"></div>
         <div style="display: table;">
           <div style="display: table-row;">
             <div style="display: table-cell; padding:3px;">
-              <div class="btn" id="reload" onclick="location.reload();">Reload Camera</div>
+              <a class='btn btn-success' id="reload" onclick="location.reload();">Reload Camera</a>
             </div>
             <div style="display: table-cell; padding:3px;">
-              <div class="btn" onclick="document.location = 'googlechrome://navigate?url=https://itoutlet.github.io/myqr/';">Open in Chrome</div>
+              <a class="btn btn btn-warning" onclick="document.location = 'googlechrome://navigate?url=https://itoutlet.github.io/myqr/';">Open in Chrome</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div>LOGIN QR CODE SCANNER <br>Powered by <a href="https://angmuya.github.io/qrcode">IT DIVISION ATT PLB</a></div>
+    <div style='color:white;'>LOGIN QR CODE SCANNER <br>Powered by <a href="https://angmuya.github.io/qrcode">IT DIVISION ATT PLB</a></div>
   </center>
 <canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
 <script type="text/javascript">load();</script>
